@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input, textarea {
+  @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+select {
+  @apply shadow border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input:focus, textarea:focus, select:focus {
+  @apply shadow-md outline-none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.alert {
+  padding: 0.8rem;
+  margin: 1rem 0;
+  opacity: 0.9;
+  background: var(--light-color);
+  color: #333;
 }
 
-.App-link {
-  color: #61dafb;
+.alert-primary {
+  background: var(--primary-color);
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.alert-light {
+  background: var(--light-color);
+  color: #333;
+}
+
+.alert-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+
+.alert-danger {
+  background: var(--danger-color);
+  color: #fff;
+}
+
+.alert-success {
+  background: var(--success-color);
+  color: #fff;
+}
+
+.alert-white {
+  background: #fff;
+  color: #333;
+  border: #ccc solid 1px;
 }
